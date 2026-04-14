@@ -17,22 +17,33 @@ NumberType = typing.Union[
 
 class CalcHash(Component):
     """A CalcHash component.
-ExampleComponent is an example component.
-It takes a property, `label`, and
-displays it.
-It renders an input with the property `value`
-which is editable by the user.
+
 
 Keyword arguments:
 
 - id (string; optional):
-    The ID used to identify this component in Dash callbacks.
+    组件ID.
 
-- label (string; required):
-    A label that will be printed when this component is rendered.
+- key (string; optional):
+    对当前组件的`key`值进行更新，可实现强制重绘当前组件的效果.
+
+- md5Value (string; optional):
+    MD5输出.
+
+- sha256Value (string; optional):
+    SHA256输出.
+
+- sha384Value (string; optional):
+    SHA384输出.
+
+- sha512Value (string; optional):
+    SHA512输出.
 
 - value (string; optional):
-    The value displayed in the input."""
+    输入.
+
+- withTimeSuffix (boolean; optional):
+    是否添加时间后缀（对value+时间戳计算hash，用于验证时间有效性，防止重放攻击）."""
     _children_props: typing.List[str] = []
     _base_nodes = ['children']
     _namespace = 'nokiao_utils_components'
@@ -42,23 +53,23 @@ Keyword arguments:
     def __init__(
         self,
         id: typing.Optional[typing.Union[str, dict]] = None,
-        label: typing.Optional[str] = None,
+        key: typing.Optional[str] = None,
         value: typing.Optional[str] = None,
+        withTimeSuffix: typing.Optional[bool] = None,
+        md5Value: typing.Optional[str] = None,
+        sha256Value: typing.Optional[str] = None,
+        sha384Value: typing.Optional[str] = None,
+        sha512Value: typing.Optional[str] = None,
         **kwargs
     ):
-        self._prop_names = ['id', 'label', 'value']
+        self._prop_names = ['id', 'key', 'md5Value', 'sha256Value', 'sha384Value', 'sha512Value', 'value', 'withTimeSuffix']
         self._valid_wildcard_attributes =            []
-        self.available_properties = ['id', 'label', 'value']
+        self.available_properties = ['id', 'key', 'md5Value', 'sha256Value', 'sha384Value', 'sha512Value', 'value', 'withTimeSuffix']
         self.available_wildcard_properties =            []
         _explicit_args = kwargs.pop('_explicit_args')
         _locals = locals()
         _locals.update(kwargs)  # For wildcard attrs and excess named props
         args = {k: _locals[k] for k in _explicit_args}
-
-        for k in ['label']:
-            if k not in args:
-                raise TypeError(
-                    'Required argument `' + k + '` was not specified.')
 
         super(CalcHash, self).__init__(**args)
 

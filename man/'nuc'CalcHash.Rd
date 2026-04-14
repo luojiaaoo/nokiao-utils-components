@@ -6,19 +6,31 @@
 \title{CalcHash component}
 
 \description{
-ExampleComponent is an example component. It takes a property, `label`, and displays it. It renders an input with the property `value` which is editable by the user.
+
 }
 
 \usage{
-'nuc'CalcHash(id=NULL, label=NULL, value=NULL)
+'nuc'CalcHash(id=NULL, key=NULL, md5Value=NULL, sha256Value=NULL,
+sha384Value=NULL, sha512Value=NULL, value=NULL,
+withTimeSuffix=NULL)
 }
 
 \arguments{
-\item{id}{Character. The ID used to identify this component in Dash callbacks.}
+\item{id}{Character. 组件ID}
 
-\item{label}{Character. A label that will be printed when this component is rendered.}
+\item{key}{Character. 对当前组件的`key`值进行更新，可实现强制重绘当前组件的效果}
 
-\item{value}{Character. The value displayed in the input.}
+\item{md5Value}{Character. MD5输出}
+
+\item{sha256Value}{Character. SHA256输出}
+
+\item{sha384Value}{Character. SHA384输出}
+
+\item{sha512Value}{Character. SHA512输出}
+
+\item{value}{Character. 输入}
+
+\item{withTimeSuffix}{Logical. 是否添加时间后缀（对value+时间戳计算hash，用于验证时间有效性，防止重放攻击）}
 }
 
 \value{named list of JSON elements corresponding to React.js properties and their values}

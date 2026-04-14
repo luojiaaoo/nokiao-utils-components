@@ -2,14 +2,14 @@
   "name": "nokiao_utils_components",
   "version": "0.0.1",
   "description": "utils for dash development",
-"repository": {
+  "repository": {
     "type": "git",
-    "url": "git://github.com/nokiao-utils-components/nokiao-utils-components.git"
+    "url": "git://github.com/luojiaaoo/nokiao-utils-components.git"
   },
   "bugs": {
-    "url": "https://github.com/nokiao-utils-components/nokiao-utils-components/issues"
+    "url": "https://github.com/luojiaaoo/nokiao-utils-components/issues"
   },
-  "homepage": "https://github.com/nokiao-utils-components/nokiao-utils-components",
+  "homepage": "https://github.com/luojiaaoo/nokiao-utils-components",
   "main": "build/index.js",
   "scripts": {
     "start": "webpack serve --config ./webpack.serve.config.js --open",
@@ -24,6 +24,7 @@
   "author": "luojiaaoo <675925864@qq.com>",
   "license": "MIT",
   "dependencies": {
+    "@noble/hashes": "^2.2.0",
     "ramda": "^0.26.1"
   },
   "devDependencies": {

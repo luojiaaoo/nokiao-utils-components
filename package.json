@@ -2,7 +2,7 @@
   "name": "nokiao_utils_components",
   "version": "0.0.1",
   "description": "utils for dash development",
-"repository": {
+  "repository": {
     "type": "git",
     "url": "git://github.com/luojiaaoo/nokiao-utils-components.git"
   },
@@ -24,6 +24,7 @@
   "author": "luojiaaoo <675925864@qq.com>",
   "license": "MIT",
   "dependencies": {
+    "@noble/hashes": "^2.2.0",
     "ramda": "^0.26.1"
   },
   "devDependencies": {
