@@ -47,8 +47,6 @@ const CalcHash = (props) => {
     return <></>;
 }
 
-CalcHash.defaultProps = {};
-
 CalcHash.propTypes = {
     /**
      * 组件ID
