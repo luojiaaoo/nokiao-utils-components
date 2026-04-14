@@ -1,0 +1,11 @@
+include nokiao_utils_components/nokiao_utils_components.min.js
+include nokiao_utils_components/nokiao_utils_components.min.js.map
+include nokiao_utils_components/async-*.js
+include nokiao_utils_components/async-*.js.map
+include nokiao_utils_components/*-shared.js
+include nokiao_utils_components/*-shared.js.map
+include nokiao_utils_components/metadata.json
+include nokiao_utils_components/package-info.json
+include README.md
+include LICENSE
+include package.json

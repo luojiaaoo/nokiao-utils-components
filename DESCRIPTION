@@ -1,0 +1,13 @@
+Package: nokiaoUtilsComponents
+Title: utils for dash development
+Version: 0.0.1
+Description: utils for dash development
+Depends: R (>= 3.0.2)
+Imports: 
+Suggests: 
+License: MIT + file LICENSE
+URL: https://github.com/nokiao-utils-components/nokiao-utils-components
+BugReports: https://github.com/nokiao-utils-components/nokiao-utils-components/issues
+Encoding: UTF-8
+LazyData: true
+KeepSource: true
