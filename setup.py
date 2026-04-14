@@ -5,7 +5,7 @@ from pathlib import Path
 here = Path(__file__).parent
 with open('package.json') as f:
     package = json.load(f)
-long_description = (here / 'README.md').read_text()
+long_description = (here / 'README.md').read_text(encoding='utf-8')
 
 package_name = package["name"].replace(" ", "_").replace("-", "_")
 
